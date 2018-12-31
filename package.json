@@ -27,7 +27,9 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -48,7 +50,12 @@
     "jest": "^23.6.0",
     "prettier": "^1.15.2",
     "react-test-renderer": "^16.7.0",
-    "react-testing-library": "^5.4.2"
+    "react-testing-library": "^5.4.2",
+    "@storybook/react": "^4.1.4",
+    "@storybook/addon-actions": "^4.1.4",
+    "@storybook/addon-links": "^4.1.4",
+    "@storybook/addons": "^4.1.4",
+    "babel-loader": "^8.0.4"
   },
   "repository": {
     "type": "git",
