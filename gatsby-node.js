@@ -2,6 +2,7 @@ const path = require('path')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
+  const SingleArticle = path.resolve('src/templates/SingleArticle.js')
 
   return new Promise(resolve => {
     graphql(`
@@ -14,6 +15,7 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               frontmatter {
                 date
+                path
               }
             }
           }
@@ -42,6 +44,14 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         createPage(pageConfig)
+      })
+
+      posts.forEach(({ node: post }) => {
+        createPage({
+          path: post.frontmatter.path,
+          component: SingleArticle,
+          context: {},
+        })
       })
 
       resolve()
