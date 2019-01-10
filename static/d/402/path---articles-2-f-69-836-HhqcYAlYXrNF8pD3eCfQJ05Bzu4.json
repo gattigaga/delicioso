@@ -1,0 +1,1 @@
+{"errors":[{"message":"Variable \"$pageIndex\" is never used in operation \"ArticlesQuery\".","locations":[{"line":4,"column":3}]}],"pageContext":{"limit":6,"skip":6,"pageIndex":1}}
